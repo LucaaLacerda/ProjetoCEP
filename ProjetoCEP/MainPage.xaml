@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoCEP.MainPage"
+             Title="Consulta de CEP"
+             Shell.TitleColor="White"
+             Shell.BackgroundColor="DarkSlateGray">
+
+    <VerticalStackLayout Padding="20" Spacing="15" BackgroundColor="Lavender">
+
+      <Entry x:Name="CepEntry" Placeholder="Digite o CEP"
+             TextColor="Black"
+             Keyboard="Numeric" MaxLength="9" 
+             TextChanged="CepEntry_TextChanged"/>
+
+      <Button Text="Buscar CEP" Clicked="OnBuscarCepClicked" 
+              BackgroundColor="DarkSlateGray"
+              TextColor="White" />
+
+      <ActivityIndicator x:Name="LoadingIndicator" IsRunning="False" IsVisible="False" 
+                         Color="DarkSlateGray"/>
+
+      <Label x:Name="ResultadoLabel" TextColor="Black" />
+
+        <Image Source="correios2.png"
+       WidthRequest="80"
+       HeightRequest="80"
+       HorizontalOptions="End"
+       VerticalOptions="End"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
